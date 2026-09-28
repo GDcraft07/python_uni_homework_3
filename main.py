@@ -33,6 +33,9 @@ def main():
         elif sign == "/":
             print(fraction_1.divFractions(fraction_2))
 
+        elif sign == "**":
+            print(fraction_1.powFractions(fraction_2))
+
         else:
             raise ValueError("Неверная знак")
 

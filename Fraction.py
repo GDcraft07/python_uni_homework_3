@@ -61,6 +61,14 @@ class Fraction:
         return self.multiFractions(Fraction(other_denominator, other_numerator))
 
 
+    def powFractions(self, other):
+        other_numerator, other_denominator = other.getInfo()
+        if other_denominator != 1:
+            raise ValueError("Возводить можно только в целое число")
+
+        return Fraction(self.numerator ** other_numerator, self.denominator ** other_numerator)
+
+
     def getInfo(self) -> tuple:
         return (self.numerator, self.denominator)
     
